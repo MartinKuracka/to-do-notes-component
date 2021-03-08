@@ -38,23 +38,24 @@
         <div class="modal">
             <div class="modal-header">
                 <h3>Add Bookmark</h3>
-                <i class="far fa-window-close" title='Modal' id='close-modal'></i>
-                <div class="modal-content">
-                    <form id="bookmark-form">
-                        <!-- Name of the bookmark -->
-                        <div class="form-group">
-                            <label for="name">Bookmark</label>
-                            <input class='form-input' type="text" id="name">
-                        </div>
-                        <!-- due date and time -->
-                        <div class="form-group">
-                            <label for="name">Due Date</label>
-                            <input class='form-input' type="text" id="name">
-                        </div>
-                        <button class="submit" id="submit">SUBMIT</button>
-                    </form>
-                </div>
+                <i class="far fa-window-close modal-close" title='Modal' id='close-modal'></i>
             </div>
+            <div class="modal-content">
+                <form class='bookmark-form' id="bookmark-form">
+                    <!-- Name of the bookmark -->
+                    <div class="form-group">
+                        <label for="name">Bookmark</label>
+                        <input class='form-input' type="text" id="name">
+                    </div>
+                    <!-- due date and time -->
+                    <div class="form-group">
+                        <label for="name">Due Date</label>
+                        <input class='form-input' type="text" id="name">
+                    </div>
+                    <button class="submit" id="submit">SUBMIT</button>
+                </form>
+            </div>
+            
         </div>
     </div>
     <!-- Script -->

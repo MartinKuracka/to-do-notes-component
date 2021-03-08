@@ -20,6 +20,11 @@ h1 {
   font-family: 'Raleway', sans-serif;
 }
 
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
 h5 {
   width: 100%;
   margin-right: 10px;
@@ -122,8 +127,7 @@ button:focus {outline:0;}
   position: relative;
   max-width: 400px;
   width: 95%;
-  height: 200px;
-  padding: 20px;  
+  height: 250px;
   background-color: white;
   border-radius: 10px;
   animation: modalopen 1s;
@@ -138,10 +142,22 @@ button:focus {outline:0;}
   }
 }
 
+.modal-header {
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(110, 74, 74);
+}
+
 .modal i {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
-  top: 10px;
+  margin: 0;
+  /* top: 10px; */
 }
 
 .modal-content {
@@ -149,9 +165,9 @@ button:focus {outline:0;}
 }
 
 .bookmark-form {
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .form-group {
@@ -173,7 +189,7 @@ label {
   border-radius: 0;
   width: auto;
   height: auto;
-  background-color: rgb(2, 2, 2, 0.8);
+  background-color: rgb(110, 74, 74);
   box-shadow: 3px 3px 5px rgb(61, 60, 60);  
 }
 
