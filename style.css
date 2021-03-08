@@ -86,7 +86,7 @@ button:focus {outline:0;}
   filter: brightness(110%);
 }
 
-/* close button */
+/* close button for bookmark*/
 .position{
   position: absolute;
   top: -10px;
@@ -99,5 +99,81 @@ button:focus {outline:0;}
 .fa-window-close {
   font-size: 20px;
   cursor: pointer;
+}
+
+/* Modal styles */
+.modal-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.show-modal {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  max-width: 400px;
+  width: 95%;
+  height: 200px;
+  padding: 20px;  
+  background-color: white;
+  border-radius: 10px;
+  animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal i {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.modal-content {
+  width: 100%;
+}
+
+.bookmark-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit {
+  padding: 5px;
+  margin-top: 10px;
+  color: whitesmoke;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  background-color: rgb(2, 2, 2, 0.8);
+  box-shadow: 3px 3px 5px rgb(61, 60, 60);  
 }
 
