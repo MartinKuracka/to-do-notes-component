@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>To Do List</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- bookmarks -->
+    <div class="container" id='bookamrks-container'>
+        <h1>BookMarks</h1>
+        <div class="items-wrap">           
+            <div class="todo-item">
+                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
+                <i class="far fa-bookmark"></i>
+                <h5>to do this</h5>
+            </div>
+            <div class="todo-item">
+                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
+                <i class="far fa-bookmark"></i>
+                <h5>to something else</h5>
+            </div>
+            <div class="todo-item">
+                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
+                <i class="far fa-bookmark"></i>
+                <h5>and to do totally different</h5>
+            </div>
+            
+        </div>
+        <!-- OpenModal -->
+        <button id="modal-id">ADD BOOKMARK</button>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
