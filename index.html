@@ -10,28 +10,13 @@
 </head>
 <body>
     <!-- bookmarks -->
-    <div class="container" id='bookamrks-container'>
+    <div class="container" id='bookmarks'>
         <h1>BookMarks</h1>
-        <div class="items-wrap">
-            <div class="todo-item">
-                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
-                <i class="far fa-bookmark"></i>
-                <h5>to do this</h5>
-            </div>
-            <div class="todo-item">
-                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
-                <i class="far fa-bookmark"></i>
-                <h5>to something else</h5>
-            </div>
-            <div class="todo-item">
-                <i class="far fa-window-close position" title='Delete Bookmark' id='delete'></i>
-                <i class="far fa-bookmark"></i>
-                <h5>and to do totally different</h5>
-            </div>
-
+        <div class="items-wrap" id='bookmarks-container'>
+      
         </div>
         <!-- OpenModal -->
-        <button id="modal-add">ADD BOOKMARK</button>
+        <button id="modal-add" type='submit'>ADD BOOKMARK</button>
     </div>
     <!-- Modal -->
     <div class="modal-container" id="show">
@@ -45,17 +30,19 @@
                     <!-- Name of the bookmark -->
                     <div class="form-group">
                         <label for="name">Bookmark</label>
-                        <input class='form-input' type="text" id="name">
+                        <textarea class='form-input' type="text" id="form-input"></textarea>
                     </div>
                     <!-- due date and time -->
                     <div class="form-group">
-                        <label for="name">Due Date</label>
-                        <input class='form-input' type="text" id="name">
+                        <label for="date-field">Due Date</label>
+                        <input class='form-date' type="date" id="date-field">
+                        <label for="link-field">Link</label>
+                        <input class='form-link' type="text" id="link-field">
                     </div>
                     <button class="submit" id="submit">SUBMIT</button>
                 </form>
             </div>
-            
+
         </div>
     </div>
     <!-- Script -->

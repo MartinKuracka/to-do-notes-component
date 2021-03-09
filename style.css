@@ -12,7 +12,14 @@ body {
   bottom: 0;
   right: 0;
   font-family: 'Raleway', sans-serif;
+}
 
+:root {
+  --primary-color: rgba(167, 85, 85, 0.2);
+  --secondary-color: rgb(110, 74, 74);
+  --button-color: rgba(187, 25, 25, 0.5);
+  --text-color-light: whitesmoke;  
+  -text-color-dark: black;
 }
 
 h1 {
@@ -26,8 +33,19 @@ h3 {
 }
 
 h5 {
-  width: 100%;
-  margin-right: 10px;
+  width: 80%;
+  margin: 0px 10px 0px 0px ;
+}
+
+p {
+  font-size: 0.7rem;
+  margin: 10px 10px 0px 33px;
+}
+
+a {
+  font-size: 0.7rem;
+  margin: 0px 10px 5px 33px;
+  color: whitesmoke;
 }
 
 i {
@@ -41,7 +59,7 @@ button {
   padding: 10px;
   color: whitesmoke;
   border-radius: 10px;
-  background-color: rgba(187, 25, 25, 0.5);
+  background-color: var(--button-color);
   box-shadow: 5px 5px 5px rgb(61, 60, 60);
 }
 
@@ -67,23 +85,25 @@ button:focus {outline:0;}
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
-  background-color: rgba(167, 85, 85, 0.2);
-  border-radius: 5px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
 }
 
 .todo-item {
   position: relative;
-  display: inline-flex;
-  /* justify-content: center; */
-  align-items: center;
-  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: whitesmoke;
-  min-width: 150px;
-  min-height: 50px;
+  min-width: 170px;
+  max-width: 200px;
+  min-height: 80px;
+  height: auto;
+  word-wrap: break-word;
   margin: 10px;
   padding: 5px;
-  background-color: rgb(110, 74, 74);
-  border-radius: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
   box-shadow: 5px 5px 12px rgb(61, 60, 60);  
 }
 
@@ -94,19 +114,26 @@ button:focus {outline:0;}
 /* close button for bookmark*/
 .position{
   position: absolute;
-  top: -10px;
+  top: -13px;
   right: -10px;
   padding: 7px;
-  background-color: rgb(110, 74, 74);
+  background-color: var(--secondary-color);
   border-radius: 5px;
 }
 
 .fa-window-close {
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-/* Modal styles */
+.item-data{
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px;
+  align-items: flex-start;
+}
+
+/* Modal From styles */
 .modal-container {
   display: none;
   justify-content: center;
@@ -127,10 +154,23 @@ button:focus {outline:0;}
   position: relative;
   max-width: 400px;
   width: 95%;
-  height: 250px;
+  height: 320px;
   background-color: white;
   border-radius: 10px;
   animation: modalopen 1s;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 100%;
+}
+
+.form-input {
+  width: auto;
+  height: 50px;
+  vertical-align: top;
 }
 
 @keyframes modalopen {
@@ -150,14 +190,12 @@ button:focus {outline:0;}
   align-items: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: rgb(110, 74, 74);
+  background-color: var(--secondary-color);
 }
 
 .modal i {
-  /* position: absolute; */
   right: 0;
   margin: 0;
-  /* top: 10px; */
 }
 
 .modal-content {
@@ -165,31 +203,29 @@ button:focus {outline:0;}
 }
 
 .bookmark-form {
-  padding: 20px;
+  padding: 5px 20px 10px 20px;
   display: flex;
   flex-direction: column;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 label {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
+.form-link {
+  height: 1rem;
+}
 .submit {
   padding: 5px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: whitesmoke;
   border-radius: 0;
   width: auto;
   height: auto;
-  background-color: rgb(110, 74, 74);
+  background-color: var(--secondary-color);
   box-shadow: 3px 3px 5px rgb(61, 60, 60);  
 }
 
