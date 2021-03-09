@@ -15,7 +15,7 @@
         <div class="items-wrap" id='bookmarks-container'>
       
         </div>
-        <!-- OpenModal -->
+        <!-- OpenModal Form -->
         <button id="modal-add" type='submit'>ADD BOOKMARK</button>
     </div>
     <!-- Modal -->
@@ -43,6 +43,16 @@
                 </form>
             </div>
 
+        </div>
+    </div>
+    <!-- Delete confirmation modal -->
+    <div class="delete-modal-container" id="delete-modal">
+        <div class="delete-modal-window">
+            <i class="far fa-window-close delete-modal-close" title='close' id='delete-close-modal'></i>
+            <div class="delete-modal-content">
+                <h5 class="delete-info" id="delete-info">Are You Sure You Want to delete this Bookmark?</h5>
+                <button class="delete-btn" id='delete-btn'>Delete</button>
+            </div>
         </div>
     </div>
     <!-- Script -->

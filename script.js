@@ -6,7 +6,10 @@ const inputfield = document.getElementById('form-input');
 const datefield = document.getElementById('date-field');
 const linkfield = document.getElementById('link-field');
 const form = document.getElementById('bookmark-form');
-const bookmarksField = document.getElementById('bookmarks-container')
+const bookmarksField = document.getElementById('bookmarks-container');
+const deleteConfirm = document.getElementById('delete-modal');
+const confirmBtn = document.getElementById('delete-btn');
+const closeDeleteModal = document.getElementById('delete-close-modal');
 
 let bookmarks = [];
 
@@ -76,7 +79,6 @@ fetchBookmarks = () => {
     // Get bookamrks if there re any
     if (JSON.parse(localStorage.getItem('bookmarks')).length >= 1) {
         bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
-        console.log(bookmarks.length)
     } else {
         console.log('je to tu',bookmarks);
         // Create bookmarks array in localstrage
@@ -92,16 +94,32 @@ fetchBookmarks = () => {
     buildBookmarks();
 }
 
+// Confirm delete bookmark
+const confirmDelete = (confirm) => {
+
+
+
+}
+
 // Delete bookmark
 const deleteBookmark = (name) => {
-    bookmarks.map((bookmark, i) => {
-        if (bookmark.name === name) {
-            bookmarks.splice(i, 1);
-        }
+    deleteConfirm.classList.add('show-delete');
+    confirmBtn.addEventListener('click', () => {
+        deleteConfirm.classList.remove('show-delete');
+        bookmarks.map((bookmark, i) => {
+            if (bookmark.name === name) {
+                bookmarks.splice(i, 1);
+            }
+        })
+        // Update bookmarks array n local storage, repopulate the DOM
+        localStorage.setItem('bookmarks', JSON. stringify(bookmarks));
+        fetchBookmarks();
     });
-    // Update bookmarks array n local storage, repopulate the DOM
-    localStorage.setItem('bookmarks', JSON. stringify(bookmarks));
-    fetchBookmarks();
+    closeDeleteModal.addEventListener('click', () => {
+        deleteConfirm.classList.remove('show-delete');
+        confirmBtn.removeEventListener('click');
+}
+    );
 }
 
 // Store bookmark
@@ -135,7 +153,7 @@ addbookmark.addEventListener('click', openmodal);
 closemodal.addEventListener('click', () => showmodal.classList.remove('show-modal'));
 window.addEventListener('click', (e) => e.target === show ? showmodal.classList.remove('show-modal') : false)
 
-// Bookamrk Form Event listeners
+// Bookmark Form Event listeners
 form.addEventListener('submit', storeBookmark);
 
 //  On Load - fetch bokmarks
